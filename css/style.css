@@ -1,6 +1,6 @@
 body{
     font-family: "Montserrat", sans-serif;
-    background-color: rgb(223, 221, 221);
+    background-color: rgb(157, 154, 154);
 }
 
 .my-task-wrapper{
@@ -14,7 +14,7 @@ body{
 .my-title-wrapper{
     text-align: center;
     padding: 2.5rem;
-    background-color: #437bb3;
+    background-color: #72a1d0;
     width: 100%;
     color: white;
     height: 30%;
@@ -28,8 +28,20 @@ body{
     border-radius: 5%;
 }
 
+.my-todo-input:hover{
+    box-shadow: 50%;
+}
+
 .my-todo-wrapper{
     height: 70%;
     width: 100%;
-    background-color: rgb(145, 145, 145);
+    background-color: rgb(228, 223, 223);
 }
+
+.my-list-wrapper{
+    list-style-type: none;
+}
+
+/* .mt-list-item{
+    
+} */

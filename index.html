@@ -18,7 +18,7 @@
 
     <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Vue Slider</title>
+    <title>TodoList</title>
 </head>
 <body>
     
@@ -28,10 +28,23 @@
                 <div class="col-12 my-task-wrapper">
                     <div class="col-12 my-title-wrapper rounded mb-2">
                         <h1> My ToDoList!</h1>
-                        <input class="my-todo-input" type="text" placeholder="Insert a New Task!">
+                        <input class="my-todo-input mx-1" v-model="newTodo" type="text" placeholder="Insert a New Task!">
+                        <button @click="addNewTask(newTodo)" class="btn btn-secondary">Add new Task</button>
                     </div>
                     <div class="col-12 my-todo-wrapper rounded">
+                        <h3 class="p-4 fs-4">
+                            Task List
+                        </h3>
 
+                        <ul class="my-list-wrapper" v-if="todoList.length >= 1">
+                            <li class=" d-flex justify-content-around" v-for="(element, index) in todoList"> 
+                                {{element}}
+                                <span>
+                                    <i class="fas fa-xmark" @click="removeTask(index)"></i>
+                                </span>
+                            </li>
+                        </ul>
+                        <h3 class="p-3 fs-4" v-else> Nessun task presente.</h3>
                     </div>
                 </div>
             </div>
