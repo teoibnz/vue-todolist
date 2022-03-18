@@ -13,7 +13,8 @@ const app = new Vue (
             addNewTask(toDoItem){
                 if(toDoItem.trim() != ''){
                     this.todoList.push(toDoItem)
-                    console.log(this.todoList)
+                    console.log(this.todoList);
+                    this.newTodo = '';
                 } else {
                     console.warn('inserisci almeno un valore!')
                 }
@@ -22,7 +23,6 @@ const app = new Vue (
             removeTask(toDoIndex){
                 this.todoList.splice(toDoIndex , 1);
             }
-
         },
         
 } 
