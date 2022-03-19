@@ -37,14 +37,14 @@
                         </h3>
 
                         <ul class="my-list-wrapper" v-if="todoList.length >= 1">
-                            <li class=" d-flex justify-content-around" v-for="(element, index) in todoList"> 
+                            <li class="mt-list-item d-flex justify-content-between px-5" v-for="(element, index) in todoList"> 
                                 {{element}}
                                 <span>
                                     <i class="fas fa-xmark" @click="removeTask(index)"></i>
                                 </span>
                             </li>
                         </ul>
-                        <h3 class="p-3 fs-4" v-else> Nessun task presente.</h3>
+                        <h4 class="p-4 fs-5" v-else> Nessun task presente.</h4>
                     </div>
                 </div>
             </div>
